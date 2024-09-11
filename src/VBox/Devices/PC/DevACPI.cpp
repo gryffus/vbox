@@ -2703,9 +2703,11 @@ static int acpiR3PlantTables(ACPIState *pThis)
 
     GCPhysCur = RT_ALIGN_32(GCPhysCur + cbDsdt, 16);
 
+    /*
     if (GCPhysCur > 0x10000)
         return PDMDEV_SET_ERROR(pThis->pDevInsR3, VERR_TOO_MUCH_DATA,
                                 N_("Error: ACPI tables bigger than 64KB"));
+    */
 
     Log(("RSDP 0x%08X\n", apicR3FindRsdpSpace()));
     addend = pThis->cbRamLow - 0x10000;
